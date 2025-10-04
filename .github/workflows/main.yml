@@ -1,0 +1,32 @@
+# This is the name of your GitHub Action workflow.
+# It will be displayed in the "Actions" tab of your repository.
+name: My Custom Workflow
+
+# This section defines when the workflow should be triggered.
+# In this case, it runs on any 'push' to the 'main' branch.
+on:
+  push:
+    branches: [ main ]
+
+# Jobs are the main tasks in your workflow.
+jobs:
+  # We define a single job named 'test'.
+  test:
+    # This specifies that the job should run on the latest version of Ubuntu.
+    runs-on: ubuntu-latest
+
+    # Steps are the individual commands or actions within a job.
+    steps:
+      # This is a standard action that checks out your repository's code
+      # so the subsequent steps can access it.
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      # This is the required step. Its 'name' is your email address.
+      # The 'run' command is what gets executed.
+      - name: 23f2003858@ds.study.iitm.ac.in
+        run: echo "This step is correctly named!"
+      
+      # Another example step to show how it works.
+      - name: Say Hello
+        run: echo "Hello, world!"
